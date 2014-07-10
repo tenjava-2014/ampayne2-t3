@@ -1,0 +1,3 @@
+name: ampayne2-t3
+main: com.tenjava.entries.ampayne2.t3.TenJava
+version: '${project.version}'
