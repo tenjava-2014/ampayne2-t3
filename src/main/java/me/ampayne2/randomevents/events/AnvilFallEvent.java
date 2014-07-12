@@ -23,9 +23,8 @@ import me.ampayne2.randomevents.api.PlayerEvent;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 
-public class AnvilFallEvent extends PlayerEvent implements Listener {
+public class AnvilFallEvent extends PlayerEvent {
     public AnvilFallEvent() {
         super("AnvilFall");
         setProbability(5);
