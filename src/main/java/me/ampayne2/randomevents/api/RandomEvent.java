@@ -14,26 +14,56 @@ public class RandomEvent {
         this.type = type;
     }
 
+    /**
+     * Gets the name of the random event.
+     *
+     * @return The random event's name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Gets the {@link me.ampayne2.randomevents.api.EventType} of the random event.
+     *
+     * @return The random event's {@link me.ampayne2.randomevents.api.EventType}.
+     */
     public EventType getType() {
         return type;
     }
 
+    /**
+     * Gets the description of the random event.
+     *
+     * @return The random event's description.
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets the description of the random event.
+     *
+     * @param description The description.
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     * Gets the probability of the random event occuring.
+     *
+     * @return The random event's probability.
+     */
     public int getProbability() {
         return probability;
     }
 
+    /**
+     * Sets the probability of the random event.
+     *
+     * @param probability The probability.
+     */
     public void setProbability(int probability) {
         this.probability = probability;
     }

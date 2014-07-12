@@ -36,7 +36,7 @@ public class EventList extends ArrayList<RandomEvent> {
     @Override
     public boolean remove(Object o) {
         if (super.remove(o)) {
-            totalProbability -= ((RandomEvent)o).getProbability();
+            totalProbability -= ((RandomEvent) o).getProbability();
             return true;
         }
         return false;

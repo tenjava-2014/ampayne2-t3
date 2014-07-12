@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents.events;
 
+import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.MinigameEvent;
 
 /**
@@ -11,7 +12,7 @@ public class PvPEvent extends MinigameEvent {
     }
 
     @Override
-    public void trigger() {
-
+    public void trigger(RandomEvents plugin) {
+        super.trigger(plugin);
     }
 }

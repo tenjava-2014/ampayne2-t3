@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents.events;
 
+import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.WorldEvent;
 import org.bukkit.World;
 
@@ -14,7 +15,7 @@ public class SolarFlareEvent extends WorldEvent {
     }
 
     @Override
-    public void trigger(World world) {
+    public void trigger(RandomEvents plugin, World world) {
 
     }
 }

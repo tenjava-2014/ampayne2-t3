@@ -32,6 +32,11 @@ public enum DefaultEvent {
         this.event = event;
     }
 
+    /**
+     * Gets the {@link me.ampayne2.randomevents.api.RandomEvent} instance of the DefaultEvent.
+     *
+     * @return The {@link me.ampayne2.randomevents.api.RandomEvent} instance.
+     */
     public RandomEvent getEvent() {
         return event;
     }

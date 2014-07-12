@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents.api;
 
+import me.ampayne2.randomevents.RandomEvents;
 import org.bukkit.Location;
 
 /**
@@ -11,8 +12,20 @@ public abstract class LocationEvent extends RandomEvent {
         super(name, EventType.LOCATION);
     }
 
-    public abstract void trigger(Location location);
+    /**
+     * Triggers the location event.
+     *
+     * @param plugin   The {@link me.ampayne2.randomevents.RandomEvents} instance.
+     * @param location The location to trigger the event at.
+     */
+    public abstract void trigger(RandomEvents plugin, Location location);
 
+    /**
+     * Checks if the location event can occur at a location.
+     *
+     * @param location The location.
+     * @return True if the location is suitable, else false.
+     */
     public boolean canOccur(Location location) {
         return true;
     }

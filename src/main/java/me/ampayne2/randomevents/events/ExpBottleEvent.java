@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents.events;
 
+import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.LocationEvent;
 import org.bukkit.Location;
 
@@ -13,7 +14,7 @@ public class ExpBottleEvent extends LocationEvent {
     }
 
     @Override
-    public void trigger(Location location) {
+    public void trigger(RandomEvents plugin, Location location) {
 
     }
 }

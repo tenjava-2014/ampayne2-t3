@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents.events;
 
+import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.PlayerEvent;
 import org.bukkit.entity.Player;
 
@@ -13,7 +14,7 @@ public class FoodCookEvent extends PlayerEvent {
     }
 
     @Override
-    public void trigger(Player player) {
+    public void trigger(RandomEvents plugin, Player player) {
 
     }
 }

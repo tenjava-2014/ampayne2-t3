@@ -4,6 +4,12 @@ Debug: true
 # Delay between when events occur
 OccurenceDelay: 60
 
+# Max tries the event manager has to trigger a random event
+MaxTries: 10
+
+# Worlds that events can occur in
+Worlds: [world]
+
 Events:
   AnvilFall:
     Enabled: true
@@ -21,6 +27,7 @@ Events:
     Enabled: true
     Probability: 1
     Amount: 10
+    MaxRadius: 150
   FoodCook:
     Enabled: true
     Probability: 1
@@ -35,6 +42,7 @@ Events:
     Enabled: true
     Probability: 1
     Amount: 15
+    MaxRadius: 150
   OreSmelt:
     Enabled: true
     Probability: 1

@@ -62,11 +62,18 @@ public class EventManager {
     public void startEvents() {
         if (eventTask == -1) {
             long delay = plugin.getConfig().getLong("OccurenceDelay", 60) * 20;
+            final int maxTries = plugin.getConfig().getInt("MaxTries", 10);
             eventTask = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
                 @Override
+                @SuppressWarnings("unchecked")
                 public void run() {
-                    RandomEvent event = events.getRandomEvent();
-                    if (event != null) {
+                    if (!events.isEmpty()) {
+                        for (int i = 0; i < maxTries; i++) {
+                            RandomEvent event = events.getRandomEvent();
+                            if (event.getType().getHandler().triggerEvent(plugin, event)) {
+                                break;
+                            }
+                        }
                     }
                 }
             }, delay, delay);
