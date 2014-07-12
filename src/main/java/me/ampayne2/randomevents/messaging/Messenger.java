@@ -4,8 +4,8 @@ import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.RandomEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,25 +30,25 @@ public class Messenger {
     }
 
     /**
-     * Sends a message to a player.
+     * Sends a message to a command sender.
      *
-     * @param player  The player.
+     * @param commandSender  The command sender.
      * @param message The message.
      * @param replace Strings to replace occurences of %s in the message with.
      */
-    public void sendMessage(Player player, Message message, String... replace) {
-        player.sendMessage(formatMessage(message, replace));
+    public void sendMessage(CommandSender commandSender, Message message, String... replace) {
+        commandSender.sendMessage(formatMessage(message, replace));
     }
 
     /**
-     * Sends an event message to a player.
+     * Sends an event message to a command sender.
      *
-     * @param player  The player.
+     * @param commandSender  The command sender.
      * @param event   The event.
      * @param replace Strings to replace occurences of %s in the message with.
      */
-    public void sendEventMessage(Player player, RandomEvent event, String... replace) {
-        player.sendMessage(formatEventMessage(event, replace));
+    public void sendEventMessage(CommandSender commandSender, RandomEvent event, String... replace) {
+        commandSender.sendMessage(formatEventMessage(event, replace));
     }
 
     /**

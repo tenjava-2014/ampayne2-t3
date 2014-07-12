@@ -5,7 +5,17 @@ package me.ampayne2.randomevents.messaging;
  */
 public enum Message {
     PREFIX("Prefix", "&9[&7RandomEvents&9]&7 "),
-    RELOAD("Reload", "Reloaded RandomEvents.");
+    RELOAD("Reload", "Reloaded RandomEvents."),
+
+    COMMAND_USAGE("CommandUsage", "&4Usage: %s"),
+
+    START_EVENTS("Start", "Events started."),
+    ALREADY_RUNNING("AlreadyRunning", "Events already started."),
+    STOP_EVENTS("Stop", "Events stopped."),
+    ALREADY_STOPPED("AlreadyStopped", "Events already stopped."),
+
+    EVENT_TRIGGER("Event.Trigger", "Triggered %s."),
+    EVENT_NOT_FOUND("Event.NotFound", "Event not found.");
 
     private String message;
     private final String path;

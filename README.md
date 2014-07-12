@@ -33,20 +33,25 @@ Built-in Events
 ---------------
 
 Descriptions and code of the following events can be found in [this package](https://github.com/tenjava/ampayne2-t3/tree/master/src/main/java/me/ampayne2/randomevents/events)
-
 - Anvil Fall Event
 - Creeper Explode Event
 - Dinnerbone Event
-- Exp Bottle Event
-- Fireworks Event
+- Exp Bottle Event (Unfinished)
+- Fireworks Event (Unfinished)
 - Food Cook Event
-- Frighten Sheep Event
+- Frighten Sheep Event (Unfinished)
 - Geomagnetic Reversal Event
-- Mob Horde Event
+- Mob Horde Event (Unfinished)
 - Ore Smelt Event
-- PvP Event
+- PvP Event (Unfinished)
 - Solar Flare Event
 - Sound Event
+
+Ideas for the future:
+- More Weather Events - Acid Rain, Hail, Ice Storm
+- Natural Disasters - Volcano, Meteor, Earthquake, Tornado
+- More Minigame Events - First to collect a certain item, First to perform certain actions
+- Collapsing Mine Events
 
 ---------------------------------------
 

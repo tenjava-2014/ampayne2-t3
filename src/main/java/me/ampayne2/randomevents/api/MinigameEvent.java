@@ -31,6 +31,15 @@ public abstract class MinigameEvent extends RandomEvent {
     }
 
     /**
+     * Checks if the minigame event is running.
+     *
+     * @return True if the minigame event is running, else false.
+     */
+    public boolean isRunning() {
+        return isRunning;
+    }
+
+    /**
      * Lets the minigame event be triggered again.
      */
     public void reset() {

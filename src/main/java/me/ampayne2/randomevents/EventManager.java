@@ -114,6 +114,15 @@ public class EventManager {
     }
 
     /**
+     * Checks if the event task is running.
+     *
+     * @return True if the event task is running, else false.
+     */
+    public boolean isRunning() {
+        return eventTask != -1;
+    }
+
+    /**
      * Destroys the event manager. Do not use after calling this method.
      */
     public void destroy() {
