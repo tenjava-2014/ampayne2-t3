@@ -4,17 +4,18 @@ import me.ampayne2.randomevents.RandomEvents;
 import me.ampayne2.randomevents.api.WorldEvent;
 import org.bukkit.World;
 
-/**
- * An event that makes all the sheep in the world jump out of their skin - literally.
- */
 public class FrightenSheepEvent extends WorldEvent {
     public FrightenSheepEvent() {
         super("FrightenSheep");
-        setProbability(1);
+        setProbability(2);
+        setDescription("Makes all the sheep in the world drop their wool.");
+        setOccurMessage("Something must have spooked the sheep! They all jumped out of their skin.");
     }
 
     @Override
     public void trigger(RandomEvents plugin, World world) {
+        // TODO: Shear all sheep
 
+        plugin.getMessenger().broadcastEventMessage(this);
     }
 }

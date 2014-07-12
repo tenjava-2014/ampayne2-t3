@@ -10,13 +10,12 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.entity.ExplosionPrimeEvent;
 import org.bukkit.plugin.PluginManager;
 
-/**
- * An event that makes all the creepers in the world explode.
- */
 public class CreeperExplodeEvent extends WorldEvent {
     public CreeperExplodeEvent() {
         super("CreeperExplode");
         setProbability(1);
+        setDescription("Makes all the creepers in the world explode.");
+        setOccurMessage("Creepers everywhere have mysteriously exploded!");
     }
 
     @Override
@@ -32,6 +31,7 @@ public class CreeperExplodeEvent extends WorldEvent {
                 if (!event.isCancelled()) {
                     creeper.damage(creeper.getHealth());
                     world.createExplosion(creeper.getLocation(), power);
+                    plugin.getMessenger().broadcastEventMessage(this);
                 }
             }
         }

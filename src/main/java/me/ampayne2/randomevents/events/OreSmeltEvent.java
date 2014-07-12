@@ -6,13 +6,12 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-/**
- * An event that smelts all the ore in a player's inventory.
- */
 public class OreSmeltEvent extends PlayerEvent {
     public OreSmeltEvent() {
         super("OreSmelt");
-        setProbability(1);
+        setProbability(7);
+        setDescription("Smelts all the ore in a random player's inventory.");
+        setOccurMessage("You got lucky and your ore was smelted!");
     }
 
     @Override
@@ -24,6 +23,7 @@ public class OreSmeltEvent extends PlayerEvent {
             }
         }
         player.updateInventory();
+        plugin.getMessenger().sendEventMessage(player, this);
     }
 
     /**

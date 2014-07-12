@@ -9,6 +9,7 @@ public class RandomEvent {
     private final String name;
     private final EventType type;
     private String description;
+    private String occurMessage;
     private int probability = 0;
     protected static final Random RANDOM = new Random();
 
@@ -51,6 +52,24 @@ public class RandomEvent {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * Gets the occur message of the random event.
+     *
+     * @return The random event's occur message.
+     */
+    public String getOccurMessage() {
+        return occurMessage;
+    }
+
+    /**
+     * Sets the occur message of the random event.
+     *
+     * @param occurMessage The occur message.
+     */
+    public void setOccurMessage(String occurMessage) {
+        this.occurMessage = occurMessage;
     }
 
     /**

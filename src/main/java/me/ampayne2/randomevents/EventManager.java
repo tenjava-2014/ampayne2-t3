@@ -20,10 +20,14 @@ public class EventManager {
 
         FileConfiguration config = plugin.getConfig();
         ConfigurationSection section = config.getConfigurationSection("Events");
-        for (DefaultEvent event : DefaultEvent.class.getEnumConstants()) {
-            if (section.getBoolean(event.getEvent().getName() + ".Enabled", true)) {
-                event.getEvent().setProbability(section.getInt(event.getEvent().getName() + ".Probability", 1));
-                addEvent(event.getEvent());
+        for (DefaultEvent defaultEvent : DefaultEvent.class.getEnumConstants()) {
+            RandomEvent event = defaultEvent.getEvent();
+            if (section.getBoolean(event.getName() + ".Enabled", true)) {
+                event.setProbability(section.getInt(event.getName() + ".Probability", 1));
+                if (section.contains(event.getName() + ".Message")) {
+                    event.setOccurMessage(section.getString(event.getName() + ".Message"));
+                }
+                addEvent(event);
             }
         }
     }

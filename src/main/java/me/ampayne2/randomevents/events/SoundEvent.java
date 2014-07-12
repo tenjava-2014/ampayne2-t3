@@ -7,13 +7,12 @@ import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
-/**
- * An event that plays random sounds to all players.
- */
 public class SoundEvent extends WorldEvent {
     public SoundEvent() {
         super("Sound");
-        setProbability(1);
+        setProbability(8);
+        setDescription("Plays random sounds to all the players in a world.");
+        setOccurMessage("Whoah, what was that? You better check outside.");
     }
 
     @Override
@@ -24,5 +23,6 @@ public class SoundEvent extends WorldEvent {
                 player.playSound(player.getLocation(), Util.randomEnum(Sound.class), 10, 1);
             }
         }
+        plugin.getMessenger().broadcastEventMessage(this);
     }
 }

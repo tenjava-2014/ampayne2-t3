@@ -7,13 +7,12 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-/**
- * An event that drops an anvil onto a player.
- */
 public class AnvilFallEvent extends PlayerEvent implements Listener {
     public AnvilFallEvent() {
         super("AnvilFall");
-        setProbability(1);
+        setProbability(5);
+        setDescription("Drops an anvil onto a random player.");
+        setOccurMessage("&4Look out below!");
     }
 
     @Override
@@ -27,7 +26,8 @@ public class AnvilFallEvent extends PlayerEvent implements Listener {
             if (location.getBlock().getType() != Material.AIR || i == fallHeight) {
                 location.subtract(0, 1, 0);
                 location.getBlock().setType(Material.ANVIL);
-                location.getBlock().setData((byte)8);
+                location.getBlock().setData((byte) 8);
+                plugin.getMessenger().sendEventMessage(player, this);
                 return;
             }
         }

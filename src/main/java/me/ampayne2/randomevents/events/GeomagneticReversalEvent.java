@@ -11,15 +11,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * An event that makes every player's compass go bonkers.
- */
 public class GeomagneticReversalEvent extends WorldEvent {
     private final Map<UUID, Integer> eventTasks = new HashMap<>();
 
     public GeomagneticReversalEvent() {
         super("GeomagneticReversal");
-        setProbability(1);
+        setProbability(3);
+        setDescription("Makes every player's compass go bonkers.");
+        setOccurMessage("Everyone's compass is going bonkers.. looks like a geomagnetic reversal!");
     }
 
     @Override
@@ -34,13 +33,17 @@ public class GeomagneticReversalEvent extends WorldEvent {
                 }
             }
         }, 0, 5));
+        plugin.getMessenger().broadcastEventMessage(this);
         final Location spawnLocation = world.getSpawnLocation();
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
             @Override
             public void run() {
                 Bukkit.getScheduler().cancelTask(eventTasks.get(worldId));
-                for (Player player : Bukkit.getWorld(worldId).getPlayers()) {
-                    player.setCompassTarget(spawnLocation);
+                World world = Bukkit.getWorld(worldId);
+                if (world != null) {
+                    for (Player player : world.getPlayers()) {
+                        player.setCompassTarget(spawnLocation);
+                    }
                 }
                 eventTasks.remove(worldId);
             }

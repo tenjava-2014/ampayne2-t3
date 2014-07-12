@@ -7,13 +7,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
 
-/**
- * An event that cooks all the food in a player's inventory.
- */
 public class FoodCookEvent extends PlayerEvent {
     public FoodCookEvent() {
         super("FoodCook");
-        setProbability(1);
+        setProbability(7);
+        setDescription("Cooks all the food in a player's inventory.");
+        setOccurMessage("You got lucky and your food was cooked!");
     }
 
     @Override
@@ -25,6 +24,7 @@ public class FoodCookEvent extends PlayerEvent {
             }
         }
         player.updateInventory();
+        plugin.getMessenger().sendEventMessage(player, this);
     }
 
     /**
