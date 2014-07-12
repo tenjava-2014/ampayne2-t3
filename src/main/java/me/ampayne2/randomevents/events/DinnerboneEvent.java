@@ -12,6 +12,7 @@ import org.bukkit.entity.LivingEntity;
 public class DinnerboneEvent extends WorldEvent {
     public DinnerboneEvent() {
         super("Dinnerbone");
+        setProbability(1);
     }
 
     @Override

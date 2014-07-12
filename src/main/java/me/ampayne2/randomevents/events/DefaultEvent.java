@@ -2,6 +2,9 @@ package me.ampayne2.randomevents.events;
 
 import me.ampayne2.randomevents.api.RandomEvent;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Default events that come with the RandomEvents plugin.
  */
@@ -40,5 +43,17 @@ public enum DefaultEvent {
      */
     public RandomEvent getEvent() {
         return event;
+    }
+
+    private static final Map<String, DefaultEvent> NAME_MAP = new HashMap<>();
+
+    public static DefaultEvent byName(String name) {
+        return NAME_MAP.get(name.toLowerCase());
+    }
+
+    static {
+        for (DefaultEvent defaultEvent : DefaultEvent.class.getEnumConstants()) {
+            NAME_MAP.put(defaultEvent.getEvent().getName().toLowerCase(), defaultEvent);
+        }
     }
 }

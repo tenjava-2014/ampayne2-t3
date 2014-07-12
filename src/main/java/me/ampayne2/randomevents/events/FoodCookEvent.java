@@ -20,7 +20,7 @@ public class FoodCookEvent extends PlayerEvent {
     @SuppressWarnings("deprecation")
     public void trigger(RandomEvents plugin, Player player) {
         for (ItemStack itemStack : player.getInventory()) {
-            if (isCookableFood(itemStack)) {
+            if (itemStack != null && isCookableFood(itemStack)) {
                 cook(itemStack);
             }
         }

@@ -19,7 +19,7 @@ public class OreSmeltEvent extends PlayerEvent {
     @SuppressWarnings("deprecation")
     public void trigger(RandomEvents plugin, Player player) {
         for (ItemStack itemStack : player.getInventory()) {
-            if (isSmeltableOre(itemStack.getType())) {
+            if (itemStack != null && isSmeltableOre(itemStack.getType())) {
                 smelt(itemStack);
             }
         }

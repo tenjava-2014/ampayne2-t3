@@ -1,5 +1,6 @@
 package me.ampayne2.randomevents;
 
+import me.ampayne2.randomevents.commands.CommandController;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -15,6 +16,7 @@ public class RandomEvents extends JavaPlugin {
 
         plugin = this;
         eventManager = new EventManager(this);
+        eventManager.startEvents();
     }
 
     @Override

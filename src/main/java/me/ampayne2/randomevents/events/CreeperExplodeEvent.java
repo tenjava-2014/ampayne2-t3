@@ -30,6 +30,7 @@ public class CreeperExplodeEvent extends WorldEvent {
                 ExplosionPrimeEvent event = new ExplosionPrimeEvent(creeper, power, false);
                 pluginManager.callEvent(event);
                 if (!event.isCancelled()) {
+                    creeper.damage(creeper.getHealth());
                     world.createExplosion(creeper.getLocation(), power);
                 }
             }

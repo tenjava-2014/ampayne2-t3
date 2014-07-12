@@ -9,6 +9,7 @@ import me.ampayne2.randomevents.api.MinigameEvent;
 public class PvPEvent extends MinigameEvent {
     public PvPEvent() {
         super("PvP");
+        setProbability(1);
     }
 
     @Override

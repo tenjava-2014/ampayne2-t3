@@ -64,3 +64,4 @@ Events:
   Sound:
     Enabled: true
     Probability: 1
+    Amount: 3
