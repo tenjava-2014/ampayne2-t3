@@ -1,15 +1,18 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.WorldEvent;
-import org.bukkit.World;
+import me.ampayne2.randomevents.event.LocationEvent;
+import org.bukkit.Location;
 
-public class MobHordeEvent extends WorldEvent {
+/**
+ * An event that spawns a horde of mobs at a location.
+ */
+public class MobHordeEvent extends LocationEvent {
     public MobHordeEvent() {
         super("Mob Horde");
     }
 
     @Override
-    public void occur(World world) {
+    public void occur(Location location) {
 
     }
 }

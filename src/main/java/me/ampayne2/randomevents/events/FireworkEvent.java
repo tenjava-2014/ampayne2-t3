@@ -4,11 +4,11 @@ import me.ampayne2.randomevents.event.LocationEvent;
 import org.bukkit.Location;
 
 /**
- * An event that drops exp bottles at a location.
+ * An event that plays fireworks around a location.
  */
-public class ExpBottleEvent extends LocationEvent {
-    public ExpBottleEvent() {
-        super("Exp Bottle");
+public class FireworkEvent extends LocationEvent {
+    public FireworkEvent() {
+        super("Firework");
     }
 
     @Override
