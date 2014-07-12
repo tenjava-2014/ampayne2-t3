@@ -1,4 +1,4 @@
-package me.ampayne2.randomevents.event;
+package me.ampayne2.randomevents.api;
 
 /**
  * Types of random events.

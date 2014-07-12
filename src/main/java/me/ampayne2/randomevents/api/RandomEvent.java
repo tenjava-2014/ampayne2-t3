@@ -1,4 +1,4 @@
-package me.ampayne2.randomevents.event;
+package me.ampayne2.randomevents.api;
 
 /**
  * The base class for a random event.
@@ -6,6 +6,7 @@ package me.ampayne2.randomevents.event;
 public class RandomEvent {
     private final String name;
     private final EventType type;
+    private int probability = 0;
 
     public RandomEvent(String name, EventType type) {
         this.name = name;
@@ -18,5 +19,13 @@ public class RandomEvent {
 
     public EventType getType() {
         return type;
+    }
+
+    public int getProbability() {
+        return probability;
+    }
+
+    public void setProbability(int probability) {
+        this.probability = probability;
     }
 }

@@ -1,6 +1,6 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.WorldEvent;
+import me.ampayne2.randomevents.api.WorldEvent;
 import org.bukkit.World;
 
 /**
@@ -10,6 +10,7 @@ import org.bukkit.World;
 public class SolarFlareEvent extends WorldEvent {
     public SolarFlareEvent() {
         super("Solar Flare");
+        setProbability(1);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.WorldEvent;
+import me.ampayne2.randomevents.api.WorldEvent;
 import org.bukkit.World;
 
 /**
@@ -9,6 +9,7 @@ import org.bukkit.World;
 public class CreeperExplodeEvent extends WorldEvent {
     public CreeperExplodeEvent() {
         super("Creeper Explode");
+        setProbability(1);
     }
 
     @Override

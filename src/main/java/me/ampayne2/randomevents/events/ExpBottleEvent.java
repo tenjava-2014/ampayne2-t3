@@ -1,6 +1,6 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.LocationEvent;
+import me.ampayne2.randomevents.api.LocationEvent;
 import org.bukkit.Location;
 
 /**
@@ -9,6 +9,7 @@ import org.bukkit.Location;
 public class ExpBottleEvent extends LocationEvent {
     public ExpBottleEvent() {
         super("Exp Bottle");
+        setProbability(1);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.PlayerEvent;
+import me.ampayne2.randomevents.api.PlayerEvent;
 import org.bukkit.entity.Player;
 
 /**
@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 public class AnvilFallEvent extends PlayerEvent {
     public AnvilFallEvent() {
         super("Anvil Fall");
+        setProbability(1);
     }
 
     @Override

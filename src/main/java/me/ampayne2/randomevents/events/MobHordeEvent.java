@@ -1,6 +1,6 @@
 package me.ampayne2.randomevents.events;
 
-import me.ampayne2.randomevents.event.LocationEvent;
+import me.ampayne2.randomevents.api.LocationEvent;
 import org.bukkit.Location;
 
 /**
@@ -9,6 +9,7 @@ import org.bukkit.Location;
 public class MobHordeEvent extends LocationEvent {
     public MobHordeEvent() {
         super("Mob Horde");
+        setProbability(1);
     }
 
     @Override
