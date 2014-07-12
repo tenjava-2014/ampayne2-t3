@@ -8,12 +8,12 @@ import org.bukkit.Location;
  */
 public class ExpBottleEvent extends LocationEvent {
     public ExpBottleEvent() {
-        super("Exp Bottle");
+        super("ExpBottle");
         setProbability(1);
     }
 
     @Override
-    public void occur(Location location) {
+    public void trigger(Location location) {
 
     }
 }

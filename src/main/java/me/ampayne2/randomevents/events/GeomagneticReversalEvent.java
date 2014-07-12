@@ -8,12 +8,12 @@ import org.bukkit.World;
  */
 public class GeomagneticReversalEvent extends WorldEvent {
     public GeomagneticReversalEvent() {
-        super("Geomagnetic Reversal");
+        super("GeomagneticReversal");
         setProbability(1);
     }
 
     @Override
-    public void occur(World world) {
+    public void trigger(World world) {
 
     }
 }

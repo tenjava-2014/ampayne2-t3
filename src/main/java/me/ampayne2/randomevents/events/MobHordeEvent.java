@@ -8,12 +8,12 @@ import org.bukkit.Location;
  */
 public class MobHordeEvent extends LocationEvent {
     public MobHordeEvent() {
-        super("Mob Horde");
+        super("MobHorde");
         setProbability(1);
     }
 
     @Override
-    public void occur(Location location) {
+    public void trigger(Location location) {
 
     }
 }

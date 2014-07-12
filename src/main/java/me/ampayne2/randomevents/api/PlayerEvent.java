@@ -11,7 +11,7 @@ public abstract class PlayerEvent extends RandomEvent {
         super(name, EventType.PLAYER);
     }
 
-    public abstract void occur(Player player);
+    public abstract void trigger(Player player);
 
     public boolean canOccur(Player player) {
         return true;

@@ -8,12 +8,12 @@ import org.bukkit.entity.Player;
  */
 public class OreSmeltEvent extends PlayerEvent {
     public OreSmeltEvent() {
-        super("Ore Smelt");
+        super("OreSmelt");
         setProbability(1);
     }
 
     @Override
-    public void occur(Player player) {
+    public void trigger(Player player) {
 
     }
 }

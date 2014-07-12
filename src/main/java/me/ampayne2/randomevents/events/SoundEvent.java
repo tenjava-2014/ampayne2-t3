@@ -13,7 +13,7 @@ public class SoundEvent extends WorldEvent {
     }
 
     @Override
-    public void occur(World world) {
+    public void trigger(World world) {
 
     }
 }

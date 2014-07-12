@@ -9,12 +9,12 @@ import org.bukkit.World;
  */
 public class SolarFlareEvent extends WorldEvent {
     public SolarFlareEvent() {
-        super("Solar Flare");
+        super("SolarFlare");
         setProbability(1);
     }
 
     @Override
-    public void occur(World world) {
+    public void trigger(World world) {
 
     }
 }

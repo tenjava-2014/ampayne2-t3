@@ -21,7 +21,10 @@ public enum DefaultEvent {
     FRIGHTEN_SHEEP(new FrightenSheepEvent()),
     GEOMAGNETIC_REVERSAL(new GeomagneticReversalEvent()),
     SOLAR_FLARE(new SolarFlareEvent()),
-    SOUND(new SoundEvent());
+    SOUND(new SoundEvent()),
+
+    // Minigame Events
+    PVP(new PvPEvent());
 
     private final RandomEvent event;
 

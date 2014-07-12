@@ -1,0 +1,50 @@
+# Show debug messages
+Debug: true
+
+# Delay between when events occur
+OccurenceDelay: 60
+
+Events:
+  AnvilFall:
+    Enabled: true
+    Probability: 1
+    FallHeight: 15
+    RemoveAfterFall: true
+  CreeperExplode:
+    Enabled: true
+    Probability: 1
+  ExpBottle:
+    Enabled: true
+    Probability: 1
+    Amount: 20
+  Fireworks:
+    Enabled: true
+    Probability: 1
+    Amount: 10
+  FoodCook:
+    Enabled: true
+    Probability: 1
+  FrightenSheep:
+    Enabled: true
+    Probability: 1
+  GeomagneticReversal:
+    Enabled: true
+    Probability: 1
+    Duration: 15
+  MobHorde:
+    Enabled: true
+    Probability: 1
+    Amount: 15
+  OreSmelt:
+    Enabled: true
+    Probability: 1
+  PvP:
+    Enabled: true
+    Probability: 1
+  SolarFlare:
+    Enabled: true
+    Probability: 1
+    Duration: 5
+  Sound:
+    Enabled: true
+    Probability: 1

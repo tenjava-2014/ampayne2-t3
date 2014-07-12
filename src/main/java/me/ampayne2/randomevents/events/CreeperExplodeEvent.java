@@ -8,12 +8,12 @@ import org.bukkit.World;
  */
 public class CreeperExplodeEvent extends WorldEvent {
     public CreeperExplodeEvent() {
-        super("Creeper Explode");
+        super("CreeperExplode");
         setProbability(1);
     }
 
     @Override
-    public void occur(World world) {
+    public void trigger(World world) {
 
     }
 }

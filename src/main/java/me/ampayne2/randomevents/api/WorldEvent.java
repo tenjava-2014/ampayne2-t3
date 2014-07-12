@@ -11,7 +11,7 @@ public abstract class WorldEvent extends RandomEvent {
         super(name, EventType.WORLD);
     }
 
-    public abstract void occur(World world);
+    public abstract void trigger(World world);
 
     public boolean canOccur(World world) {
         return true;

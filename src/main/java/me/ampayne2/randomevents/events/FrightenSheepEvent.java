@@ -8,12 +8,12 @@ import org.bukkit.World;
  */
 public class FrightenSheepEvent extends WorldEvent {
     public FrightenSheepEvent() {
-        super("Frighten Sheep");
+        super("FrightenSheep");
         setProbability(1);
     }
 
     @Override
-    public void occur(World world) {
+    public void trigger(World world) {
 
     }
 }

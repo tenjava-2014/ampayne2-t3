@@ -8,12 +8,12 @@ import org.bukkit.entity.Player;
  */
 public class AnvilFallEvent extends PlayerEvent {
     public AnvilFallEvent() {
-        super("Anvil Fall");
+        super("AnvilFall");
         setProbability(1);
     }
 
     @Override
-    public void occur(Player player) {
+    public void trigger(Player player) {
 
     }
 }

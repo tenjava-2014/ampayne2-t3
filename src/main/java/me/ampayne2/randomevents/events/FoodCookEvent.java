@@ -8,12 +8,12 @@ import org.bukkit.entity.Player;
  */
 public class FoodCookEvent extends PlayerEvent {
     public FoodCookEvent() {
-        super("Food Cook");
+        super("FoodCook");
         setProbability(1);
     }
 
     @Override
-    public void occur(Player player) {
+    public void trigger(Player player) {
 
     }
 }

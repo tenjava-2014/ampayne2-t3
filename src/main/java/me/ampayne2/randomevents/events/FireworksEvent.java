@@ -13,7 +13,7 @@ public class FireworksEvent extends LocationEvent {
     }
 
     @Override
-    public void occur(Location location) {
+    public void trigger(Location location) {
 
     }
 }

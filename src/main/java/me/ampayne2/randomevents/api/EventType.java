@@ -6,5 +6,6 @@ package me.ampayne2.randomevents.api;
 public enum EventType {
     LOCATION,
     PLAYER,
-    WORLD
+    WORLD,
+    MINIGAME
 }

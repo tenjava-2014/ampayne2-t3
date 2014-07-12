@@ -11,7 +11,7 @@ public abstract class LocationEvent extends RandomEvent {
         super(name, EventType.LOCATION);
     }
 
-    public abstract void occur(Location location);
+    public abstract void trigger(Location location);
 
     public boolean canOccur(Location location) {
         return true;
