@@ -69,7 +69,23 @@ Maven will download all required dependencies and build a ready-for-use plugin p
 Usage
 -----
 
-1. Install and configure plugin - no commands required to use!
+1. Install and configure plugin - it's ready to go!
+
+---------------------------------------
+
+Commands
+--------
+
+/randomevents start
+- Starts the random events
+/randomevents stop
+- Stops the random events
+/randomevents reload
+- Reloads the plugin
+/randomevents trigger <event>
+- Manually triggers an event
+
+Aliases for /randomevents: /re, /revents
 
 ---------------------------------------
 

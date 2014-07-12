@@ -1,10 +1,10 @@
 # Show debug messages
-Debug: true
+Debug: false
 
 # Should the events begin when the server starts
 StartOnStartup: true
 
-# Delay between when events occur
+# Delay between when events occur - for testing purposes may need to be set lower
 OccurenceDelay: 60
 
 # Max tries the event manager has to trigger a random event
@@ -30,12 +30,12 @@ Events:
     Message: "We've been receiving sightings of upside down skeletons."
     Duration: 15
   ExpBottle:
-    Enabled: true
+    Enabled: false
     Probability: 4
     Message: "A large amount of experience has been spotted at x:%s z:%s!"
     Amount: 20
   Fireworks:
-    Enabled: true
+    Enabled: false
     Probability: 3
     Message: "It's like the 4th of July!"
     Amount: 2
@@ -44,7 +44,7 @@ Events:
     Probability: 7
     Message: "You got lucky and your food was cooked!"
   FrightenSheep:
-    Enabled: true
+    Enabled: false
     Probability: 2
     Message: "Something must have spooked the sheep! They all jumped out of their skin."
   GeomagneticReversal:
@@ -53,7 +53,7 @@ Events:
     Message: "Everyone's compass is going bonkers.. looks like a geomagnetic reversal!"
     Duration: 15
   MobHorde:
-    Enabled: true
+    Enabled: false
     Probability: 4
     Message: "A horde of mobs was spotted at x:%s z:%s!"
     Amount: 15
@@ -63,7 +63,7 @@ Events:
     Probability: 7
     Message: "You got lucky and your ore was smelted!"
   PvP:
-    Enabled: true
+    Enabled: false
     Probability: 5
     Message: "The next person to kill another player will be rewarded!"
     Rewards:
