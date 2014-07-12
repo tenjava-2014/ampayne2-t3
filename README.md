@@ -76,7 +76,9 @@ Included with the plugin are four types of events which should be sufficient for
 - Player events, which occur to random players.
 - World events, which occur to a world.
 - Minigame events, which occur to a server and can be completed for a reward.
+
 ---
+
 Creating an event
 - Extend the type of event it will be (for example [WorldEvent](https://github.com/tenjava/ampayne2-t3/blob/master/src/main/java/me/ampayne2/randomevents/api/WorldEvent.java)).
 Then implement the methods and add your functionality. Don't forget to broadcast the occur message!
@@ -101,12 +103,16 @@ public class SolarFlareEvent extends WorldEvent {
 }
 ```
 Events are also able to extend Listener if you need more functionality.
+
 ---
+
 Creating a new type of event
 - Extend [RandomEvent](https://github.com/tenjava/ampayne2-t3/blob/master/src/main/java/me/ampayne2/randomevents/api/RandomEvent.java).
 - Extend [EventHandler](https://github.com/tenjava/ampayne2-t3/blob/master/src/main/java/me/ampayne2/randomevents/api/handlers/EventHandler.java) for your new type of event - it will take care of triggering the event.
 For examples of creating the event type and handler, take a look at some of the built in event types and their handlers.
+
 ---
+
 Adding your event to the manager
 - Get the RandomEvents plugin instance:
 ```
@@ -119,12 +125,16 @@ if (plugin != null && plugin instanceof RandomEvents) {
 ```
 randomEvents.getEventManager().addEvent(new YourCustomEvent());
 ```
+
 ---
+
 Getting an event by its name
 ```
 randomEvents.getEventManager().getEvent("YourCustomEventName");
 ```
+
 ---
+
 Triggering an event
 ```
 yourCustomEvent.getHandler().trigger(randomEvents, yourCustomEvent);
