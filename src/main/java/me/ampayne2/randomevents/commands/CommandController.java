@@ -21,7 +21,7 @@ public class CommandController implements CommandExecutor {
     @Override
     @SuppressWarnings("unchecked")
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (!label.equalsIgnoreCase("randomevents")) {
+        if (!cmd.getName().equalsIgnoreCase("randomevents")) {
             return false;
         }
         if (args.length == 0) {

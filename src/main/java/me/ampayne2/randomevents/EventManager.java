@@ -48,9 +48,8 @@ public class EventManager {
      * @return The {@link me.ampayne2.randomevents.api.RandomEvent}, null if not found.
      */
     public RandomEvent getEvent(String name) {
-        name = name.toLowerCase();
         for (RandomEvent event : events) {
-            if (event.getName().equals(name)) {
+            if (event.getName().equalsIgnoreCase(name)) {
                 return event;
             }
         }

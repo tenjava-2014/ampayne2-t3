@@ -60,10 +60,12 @@ public class EventList extends ArrayList<RandomEvent> {
 
         int index = RANDOM.nextInt(totalProbability);
         int sum = 0;
-        int i = 0;
-        while (sum < index) {
-            sum += get(i++).getProbability();
+        for (RandomEvent event : this) {
+            sum += event.getProbability();
+            if (index <= sum) {
+                return event;
+            }
         }
-        return get(i - 1);
+        return null;
     }
 }

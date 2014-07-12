@@ -20,4 +20,10 @@ public class SolarFlareEvent extends WorldEvent {
         }
         plugin.getMessenger().broadcastEventMessage(this);
     }
+
+    @Override
+    public boolean canOccur(World world) {
+        long time = world.getTime();
+        return super.canOccur(world) && time < 12300 || time > 23850;
+    }
 }

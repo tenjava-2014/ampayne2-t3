@@ -10,7 +10,7 @@ public enum Message {
     COMMAND_USAGE("CommandUsage", "&4Usage: %s"),
 
     START_EVENTS("Start", "Events started."),
-    ALREADY_RUNNING("AlreadyRunning", "Events already started."),
+    ALREADY_RUNNING("AlreadyStarted", "Events already started."),
     STOP_EVENTS("Stop", "Events stopped."),
     ALREADY_STOPPED("AlreadyStopped", "Events already stopped."),
 

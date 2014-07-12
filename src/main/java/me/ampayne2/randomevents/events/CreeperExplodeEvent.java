@@ -31,9 +31,9 @@ public class CreeperExplodeEvent extends WorldEvent {
                 if (!event.isCancelled()) {
                     creeper.damage(creeper.getHealth());
                     world.createExplosion(creeper.getLocation(), power);
-                    plugin.getMessenger().broadcastEventMessage(this);
                 }
             }
         }
+        plugin.getMessenger().broadcastEventMessage(this);
     }
 }

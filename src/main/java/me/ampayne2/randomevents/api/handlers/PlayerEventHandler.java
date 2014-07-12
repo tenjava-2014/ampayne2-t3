@@ -21,6 +21,8 @@ public class PlayerEventHandler extends EventHandler<PlayerEvent> {
             if (event.canOccur(player)) {
                 event.trigger(plugin, player);
                 return true;
+            } else {
+                players.remove(player);
             }
         }
         return false;

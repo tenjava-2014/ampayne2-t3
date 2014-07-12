@@ -81,7 +81,7 @@ Events:
     Probability: 8
     Message: "Whoah, what was that? You better check outside."
     Amount: 3
-Message:
+Messages:
   Prefix: "&9[&7RandomEvents&9]&7 "
   Reload: "Reloaded RandomEvents"
   CommandUsage: "&4Usage: %s"
