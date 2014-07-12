@@ -8,7 +8,7 @@ import org.bukkit.World;
  */
 public abstract class WorldEvent extends RandomEvent {
     public WorldEvent(String name) {
-        super(name, EventType.WORLD);
+        super(name, DefaultEventHandler.WORLD.getHandler());
     }
 
     /**

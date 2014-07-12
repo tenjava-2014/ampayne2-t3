@@ -9,7 +9,7 @@ public abstract class MinigameEvent extends RandomEvent {
     private boolean isRunning = false;
 
     public MinigameEvent(String name) {
-        super(name, EventType.MINIGAME);
+        super(name, DefaultEventHandler.MINIGAME.getHandler());
     }
 
     /**

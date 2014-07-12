@@ -1,5 +1,7 @@
 package me.ampayne2.randomevents.api;
 
+import me.ampayne2.randomevents.api.handlers.EventHandler;
+
 import java.util.Random;
 
 /**
@@ -7,15 +9,15 @@ import java.util.Random;
  */
 public class RandomEvent {
     private final String name;
-    private final EventType type;
+    private final EventHandler eventHandler;
     private String description;
     private String occurMessage;
     private int probability = 0;
     protected static final Random RANDOM = new Random();
 
-    public RandomEvent(String name, EventType type) {
+    public RandomEvent(String name, EventHandler eventHandler) {
         this.name = name;
-        this.type = type;
+        this.eventHandler = eventHandler;
     }
 
     /**
@@ -28,12 +30,12 @@ public class RandomEvent {
     }
 
     /**
-     * Gets the {@link me.ampayne2.randomevents.api.EventType} of the random event.
+     * Gets the {@link DefaultEventHandler} of the random event.
      *
-     * @return The random event's {@link me.ampayne2.randomevents.api.EventType}.
+     * @return The random event's {@link DefaultEventHandler}.
      */
-    public EventType getType() {
-        return type;
+    public EventHandler getHandler() {
+        return eventHandler;
     }
 
     /**

@@ -42,6 +42,22 @@ public class EventManager {
     }
 
     /**
+     * Gets a {@link me.ampayne2.randomevents.api.RandomEvent} by its name.
+     *
+     * @param name The name.
+     * @return The {@link me.ampayne2.randomevents.api.RandomEvent}, null if not found.
+     */
+    public RandomEvent getEvent(String name) {
+        name = name.toLowerCase();
+        for (RandomEvent event : events) {
+            if (event.getName().equals(name)) {
+                return event;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Adds a {@link me.ampayne2.randomevents.api.RandomEvent} to the manager.
      *
      * @param event The {@link me.ampayne2.randomevents.api.RandomEvent} to add.
@@ -78,7 +94,7 @@ public class EventManager {
                     if (!events.isEmpty()) {
                         for (int i = 0; i < maxTries; i++) {
                             RandomEvent event = events.getRandomEvent();
-                            if (event.getType().getHandler().triggerEvent(plugin, event)) {
+                            if (event.getHandler().triggerEvent(plugin, event)) {
                                 break;
                             }
                         }

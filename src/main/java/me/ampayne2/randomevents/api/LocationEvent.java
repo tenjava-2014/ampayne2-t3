@@ -8,7 +8,7 @@ import org.bukkit.Location;
  */
 public abstract class LocationEvent extends RandomEvent {
     public LocationEvent(String name) {
-        super(name, EventType.LOCATION);
+        super(name, DefaultEventHandler.LOCATION.getHandler());
     }
 
     /**

@@ -1,7 +1,6 @@
 package me.ampayne2.randomevents.api.handlers;
 
 import me.ampayne2.randomevents.RandomEvents;
-import me.ampayne2.randomevents.api.EventType;
 import me.ampayne2.randomevents.api.PlayerEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,9 +12,6 @@ import java.util.List;
  * Handles attempting to trigger a {@link me.ampayne2.randomevents.api.PlayerEvent}.
  */
 public class PlayerEventHandler extends EventHandler<PlayerEvent> {
-    public PlayerEventHandler() {
-        super(EventType.PLAYER);
-    }
 
     @Override
     public boolean triggerEvent(RandomEvents plugin, PlayerEvent event) {

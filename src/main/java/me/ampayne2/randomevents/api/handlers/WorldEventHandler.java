@@ -1,7 +1,6 @@
 package me.ampayne2.randomevents.api.handlers;
 
 import me.ampayne2.randomevents.RandomEvents;
-import me.ampayne2.randomevents.api.EventType;
 import me.ampayne2.randomevents.api.WorldEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -13,9 +12,6 @@ import java.util.List;
  * Handles attempting to trigger a {@link me.ampayne2.randomevents.api.WorldEvent}.
  */
 public class WorldEventHandler extends EventHandler<WorldEvent> {
-    public WorldEventHandler() {
-        super(EventType.WORLD);
-    }
 
     @Override
     public boolean triggerEvent(RandomEvents plugin, WorldEvent event) {

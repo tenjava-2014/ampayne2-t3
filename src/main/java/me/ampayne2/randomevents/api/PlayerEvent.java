@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
  */
 public abstract class PlayerEvent extends RandomEvent {
     public PlayerEvent(String name) {
-        super(name, EventType.PLAYER);
+        super(name, DefaultEventHandler.PLAYER.getHandler());
     }
 
     /**
