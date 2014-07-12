@@ -5,6 +5,7 @@ import me.ampayne2.randomevents.events.DefaultEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.Listener;
 
 /**
  * Manages the {@link me.ampayne2.randomevents.api.RandomEvent} in the RandomEffects plugin.
@@ -22,7 +23,7 @@ public class EventManager {
         for (DefaultEvent event : DefaultEvent.class.getEnumConstants()) {
             if (section.getBoolean(event.getEvent().getName() + ".Enabled", true)) {
                 event.getEvent().setProbability(section.getInt(event.getEvent().getName() + ".Probability", 1));
-                events.add(event.getEvent());
+                addEvent(event.getEvent());
             }
         }
     }
@@ -44,6 +45,9 @@ public class EventManager {
     public void addEvent(RandomEvent event) {
         if (!events.contains(event)) {
             events.add(event);
+            if (event instanceof Listener) {
+                Bukkit.getPluginManager().registerEvents((Listener) event, plugin);
+            }
         }
     }
 
