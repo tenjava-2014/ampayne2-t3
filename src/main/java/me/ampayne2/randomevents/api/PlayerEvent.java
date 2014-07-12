@@ -7,7 +7,6 @@ import org.bukkit.entity.Player;
  * An event that can occur to a player.
  */
 public abstract class PlayerEvent extends RandomEvent {
-
     public PlayerEvent(String name) {
         super(name, EventType.PLAYER);
     }

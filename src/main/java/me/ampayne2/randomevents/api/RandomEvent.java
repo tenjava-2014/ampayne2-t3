@@ -1,5 +1,7 @@
 package me.ampayne2.randomevents.api;
 
+import java.util.Random;
+
 /**
  * The base class for a random event.
  */
@@ -8,6 +10,7 @@ public class RandomEvent {
     private final EventType type;
     private String description;
     private int probability = 0;
+    protected static final Random RANDOM = new Random();
 
     public RandomEvent(String name, EventType type) {
         this.name = name;

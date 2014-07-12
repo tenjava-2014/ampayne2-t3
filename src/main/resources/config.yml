@@ -19,6 +19,9 @@ Events:
   CreeperExplode:
     Enabled: true
     Probability: 1
+  Dinnerbone:
+    Enabled: true
+    Probability: 1
   ExpBottle:
     Enabled: true
     Probability: 1
@@ -49,6 +52,11 @@ Events:
   PvP:
     Enabled: true
     Probability: 1
+    Rewards:
+      - Material: DIAMOND
+        Amount: 1
+      - Material: GOLD_INGOT
+        Amount: 5
   SolarFlare:
     Enabled: true
     Probability: 1

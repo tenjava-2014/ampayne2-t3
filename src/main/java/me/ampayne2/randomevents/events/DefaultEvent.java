@@ -18,6 +18,7 @@ public enum DefaultEvent {
 
     // World Events
     CREEPER_EXPLODE(new CreeperExplodeEvent()),
+    DINNERBONE(new DinnerboneEvent()),
     FRIGHTEN_SHEEP(new FrightenSheepEvent()),
     GEOMAGNETIC_REVERSAL(new GeomagneticReversalEvent()),
     SOLAR_FLARE(new SolarFlareEvent()),
