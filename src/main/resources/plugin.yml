@@ -1,3 +1,3 @@
-name: ampayne2-t3
-main: com.tenjava.entries.ampayne2.t3.TenJava
+name: RandomEvents
+main: me.ampayne2.randomevents.RandomEvents
 version: '${project.version}'
