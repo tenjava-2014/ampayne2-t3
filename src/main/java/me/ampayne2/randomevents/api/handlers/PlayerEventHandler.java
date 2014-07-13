@@ -23,7 +23,7 @@ import me.ampayne2.randomevents.api.PlayerEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,7 +33,7 @@ public class PlayerEventHandler extends EventHandler<PlayerEvent> {
 
     @Override
     public boolean triggerEvent(RandomEvents plugin, PlayerEvent event) {
-        List<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
+        List<Player> players = Arrays.asList(Bukkit.getOnlinePlayers());
         while (!players.isEmpty()) {
             Player player = players.get(RANDOM.nextInt(players.size()));
             if (event.canOccur(player)) {
